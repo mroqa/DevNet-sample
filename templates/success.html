@@ -1,0 +1,7 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    {% for item in session.pop('dList', []) %}
+        {{ item }}
+    {% endfor %}
+{% endblock %}

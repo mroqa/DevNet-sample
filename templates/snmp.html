@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Add SNMPv3 configuration to Nexus Switch</h1>
+    <form method="POST" action="">
+        <div class="form-group">
+            <label for="switchIP">Switch IP</label>
+            <input type="text" name="swip" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="snmpUser">SNMP User</label>
+            <input type="text" name="snmpUser" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="hashing">Hashing Type</label>
+            <select class="form-control" name="hash">
+                <option value="sha" selected>sha</option>
+                <option value="md5">md5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="privacy">Privacy Type</label>
+            <select class="form-control" name="priv">
+                <option value="aes-128" selected>AES 128</option>
+                <option value="aes-192">AES 192</option>
+                <option value="aes-256">AES 256</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="key">Encryption Key</label>
+            <input type="password" name="key" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact</label>
+            <input type="email" name="contact" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" name="location" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="server">Server</label>
+            <input type="text" name="server" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="source">Source Interface</label>
+            <input type="text" name="source" value="mgmt 0" class="form-control" readonly="readonly" />
+        </div>
+        <div class="form-group">
+            <label for="vrf">source VRF</label>
+            <input type="text" name="vrf" class="form-control" />
+        </div>
+
+
+        <p><button type="submit" class="btn btn-primary">Submit</button></p>
+    </form>
+{% endblock %}

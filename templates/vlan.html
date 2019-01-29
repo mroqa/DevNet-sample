@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Click on a device to see the running configration </h1>
+    <!--<ul class="list-group">
+        {% for cmd in commands %}
+            <li class="list-group-item">{{cmd.cmd}}</li>
+        {% endfor %}
+    </ul> -->
+
+    <ul class="list-group">
+            {% for app in apps %}
+                <a href="device/{{app.id}}"><li class="list-group-item">{{app.app}}</li></a>
+            {% endfor %}
+    </ul>
+{% endblock %}
