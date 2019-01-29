@@ -59,23 +59,23 @@ def Apps():
     apps = [
         {
             'id': '1',
-            'app': 'RY_ELM1_N7KSRV_AGG01',
+            'app': 'Nexus_01',
             'ip': '10.10.10.5'
         },
         {
             'id': '2',
-            'app': 'RY_ELM1_N7KSRV_AGG02',
-            'ip': '192.168.100.251'
+            'app': 'Nexus_02',
+            'ip': '192.168.10.251'
         },
         {
             'id': '3',
-            'app': 'RY_ELM1_N9KSRV_ACC01',
-            'ip': '192.168.100.251'
+            'app': 'Nexus_011',
+            'ip': '192.168.10.251'
         },
         {
             'id': '4',
-            'app': 'RY_ELM1_N9KSRV_ACC02',
-            'ip': '192.168.100.251'
+            'app': 'Nexus_022',
+            'ip': '192.168.10.251'
         }
     ]
 
