@@ -21,7 +21,11 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template('about.html')
+    base = os.path.dirname(os.path.abspath(__file__))
+    target_folder = os.path.join(base, 'static')
+    target = os.path.join(target_folder, 'net.jpg')
+    print(target)
+    return render_template('about.html', image_url = target)
 
 @app.route("/devices")
 def vlan():
