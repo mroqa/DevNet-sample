@@ -7,7 +7,7 @@ from netmiko import ConnectHandler
 from datetime import datetime
 import ipaddress
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder = "templates/img")
 
 cmds = Commands()
 apps = Apps()
@@ -21,11 +21,7 @@ def index():
 
 @app.route("/about")
 def about():
-    base = os.path.dirname(os.path.abspath(__file__))
-    target_folder = os.path.join(base, 'static')
-    target = os.path.join(target_folder, 'net.jpg')
-    print(target)
-    return render_template('about.html', image_url = target)
+    return render_template('about.html')
 
 @app.route("/devices")
 def vlan():
