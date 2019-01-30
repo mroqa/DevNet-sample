@@ -42,12 +42,12 @@ def provision():
             d['password']=passCode
             d['username']=userName
 
-        '''for d in devices:
+        for d in devices:
             netco = ConnectHandler(**d)
             all_commands = ['vlan '+vlanId , 'name '+vlanName]
             output = netco.send_config_set(all_commands)
             netco.save_config()
-            print(output)'''
+            print(output)
         session['dList'] = devices
         print(interface)
 
