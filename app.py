@@ -126,13 +126,13 @@ def snmp():
             server = ipaddress.ip_address(server)
             netco = ConnectHandler(device_type='cisco_nxos', ip='10.10.10.5', username='admin', password='admin')
             config_commands = ['snmp-server globalEnforcePriv',
-                               'snmp-server user SNMPv3User auth sha P@$$w0rd321 priv aes-128 P@$$w0rd321',
-                               'snmp-server contact SOC_NW',
-                               'snmp-server location ELM',
+                               'snmp-server user SNMPv3u auth sha password priv aes-128 password',
+                               'snmp-server contact peron@email.com',
+                               'snmp-server location CO',
                                'snmp-server enable traps',
-                               'snmp-server host 192.168.100.102 traps version 3 priv SNMPv3User',
-                               'snmp-server host 192.168.100.102 source-interface mgmt 0',
-                               'snmp-server host 192.168.100.102 use-vrf management',
+                               'snmp-server host 10.10.10.102 traps version 3 priv SNMPv3u',
+                               'snmp-server host 10.10.10.102 source-interface mgmt 0',
+                               'snmp-server host 10.10.10.102 use-vrf management',
                                ]
             output = netco.send_config_set(config_commands)
             print(output)
