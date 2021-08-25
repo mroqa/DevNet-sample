@@ -87,7 +87,7 @@ def device(id):
                 'device_type': 'cisco_nxos',
                 'ip': x['ip'],
                 'username':'cattool',
-                 'password':'NW762@n2016',
+                 'password':'XYZxyz',
             }'''
             print(nxos)
 
